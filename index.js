@@ -4,7 +4,6 @@ function displayCommits() {
 
 function displayRepositories(req) {
   const repos = JSON.parse(req.responseText)
-  debugger
   $('#repositories').html()
 }
 
@@ -25,5 +24,4 @@ function getRepositories(){
   const name = $('input[type=text]').value
   req.open('GET', 'https://api.github.com/users/' + name + '/repos');
   req.send();
-  displayRepositories(req)
 }
