@@ -15,7 +15,6 @@ function displayRepositories() {
     }).join('')
     +
     '</ul>'
-  debugger
   $('#repositories').html(html)
 }
 
