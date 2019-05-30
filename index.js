@@ -2,7 +2,7 @@ function displayCommits() {
   $('#repositories')
 }
 
-function displayRepositories(req) {
+function displayRepositories() {
   const repos = JSON.parse(this.responseText)
   debugger
   $('#repositories').html()
