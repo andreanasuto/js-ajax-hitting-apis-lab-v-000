@@ -2,7 +2,7 @@ function displayCommits() {
   $('#repositories')
 }
 
-function displayRepositories(repos) {
+function displayRepositories(req) {
   console.log(req)
   $('#repositories').html()
 }
