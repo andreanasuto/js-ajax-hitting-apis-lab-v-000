@@ -25,7 +25,6 @@ function displayBranches() {
 function getCommits(el){
   const req = new XMLHttpRequest();
   debugger
-  const name =
   req.open('GET', 'https://api.github.com/users/' + name + '/' + repo_name + '/commits');
   req.addEventListener('load', displayRepositories);
   req.send();
