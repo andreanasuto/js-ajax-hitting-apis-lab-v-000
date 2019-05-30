@@ -22,6 +22,7 @@ function getBranches(){
 function getRepositories(){
   const req = new XMLHttpRequest();
   const name = document.getElementById('username').value
+  req.addEventListener('load', displayRepositories);
   req.open('GET', 'https://api.github.com/users/' + name + '/repos');
   req.send();
 }
