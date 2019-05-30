@@ -34,7 +34,7 @@ function displayBranches() {
   const branches = JSON.parse(this.responseText)
   const html =
     '<ul>' +
-    branches.map(function(repo){
+    branches.map(function(branch){
       debugger
       return `<li><h2> ${repo.owner.login} </h2>
       <a href="${repo.html_url}" data-repo="${repo.name}"> ${repo.name} </a><br>
