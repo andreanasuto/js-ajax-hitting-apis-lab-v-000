@@ -1,15 +1,10 @@
 function displayCommits() {
   const commits = JSON.parse(this.responseText)
   const html =
-    '<ul>' +
     commits.map(function(commit){
-      return `<li>${commit.commit.author.name} </li>
-      <li>${commit.author.login}</li>
-      <li>${commit.commit.message}</li>
+      return `<p> ${branch.name} </p>
       `
-    }).join('')
-    +
-    '</ul>'
+    })
   $('#details').html(html)
 }
 
