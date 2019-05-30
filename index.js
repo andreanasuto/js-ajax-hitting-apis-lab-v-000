@@ -12,7 +12,7 @@ function displayRepositories() {
       <a href="#" onclick="getCommits(this)">Get Commits</a>
       <a href="#" onclick="getBranches(this)">Get Branches</a>
       `
-    })
+    }).join('')
     +
     '</ul>'
   debugger
