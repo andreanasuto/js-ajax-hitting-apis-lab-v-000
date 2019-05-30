@@ -4,14 +4,15 @@ function displayCommits() {
 
 function displayRepositories() {
   const repos = JSON.parse(this.responseText)
-  const info = repos.map(function (repo) {
-  	return repo.html_url, repo.name
-  })
-  const html = '<ul>'
-  info.forEach(function (e) {
-    html += `<li> ${e} </li>`
-  })
-  html += '</ul>'
+  const html = 
+    '<ul>' +
+    repos.map(function(repo){
+      return `<li><h2> ${repo.owner} </h2>
+      <a href="${repo.html_url}" data-repo="${repo.name}">${repo.name} </a>
+      `
+    })
+    +
+    '</ul>'
   debugger
   $('#repositories').html(html)
 }
