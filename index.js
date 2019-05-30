@@ -24,14 +24,20 @@ function displayBranches() {
 
 function getCommits(el){
   const req = new XMLHttpRequest();
-  debugger
+  const repo_name = el.dataset.repository
+  const name = el.dataset.username
   req.open('GET', 'https://api.github.com/users/' + name + '/' + repo_name + '/commits');
   req.addEventListener('load', displayCommits);
   req.send();
 }
 
-function getBranches(){
-
+function getBranches(el){
+  const req = new XMLHttpRequest();
+  const repo_name = el.dataset.repository
+  const name = el.dataset.username
+  req.open('GET', 'https://api.github.com/users/' + name + '/' + repo_name + '/commits');
+  req.addEventListener('load', displayCommits);
+  req.send();
 }
 
 function getRepositories(){
