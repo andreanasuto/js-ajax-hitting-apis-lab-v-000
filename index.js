@@ -29,7 +29,6 @@ function displayBranches() {
   const html =
     '<ul>' +
     branches.map(function(branch){
-      debugger
       return `<li><h2> ${repo.owner.login} </h2>
       <a href="${repo.html_url}" data-repo="${repo.name}"> ${repo.name} </a><br>
       <a href="#" onclick="getCommits(this)">Get Commits</a><br>
