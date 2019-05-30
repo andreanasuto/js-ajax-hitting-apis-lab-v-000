@@ -19,7 +19,7 @@ function displayRepositories() {
 }
 
 function displayBranches() {
-  
+
 }
 
 function getCommits(){
