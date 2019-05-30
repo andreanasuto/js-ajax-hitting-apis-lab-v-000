@@ -1,10 +1,30 @@
 function displayCommits() {
   const commits = JSON.parse(this.responseText)
   const html =
+  '<ul>' +
     commits.map(function(commit){
-      return `<p> ${branch.name} </p>
+      debugger
+      return `<p> ${commit.name} </p>
       `
-    })
+    }).join('')
+    +
+  '</ul>'
+  $('#details').html(html)
+}
+
+function displayBranches() {
+  const branches = JSON.parse(this.responseText)
+  const html =
+    '<ul>' +
+    branches.map(function(branch){
+      return `<li><h2> ${repo.owner.login} </h2>
+      <a href="${repo.html_url}" data-repo="${repo.name}"> ${repo.name} </a><br>
+      <a href="#" onclick="getCommits(this)">Get Commits</a><br>
+      <a href="#" onclick="getBranches(this)">Get Branches</a><br>
+      `
+    }).join('')
+    +
+    '</ul>'
   $('#details').html(html)
 }
 
@@ -24,21 +44,6 @@ function displayRepositories() {
   $('#repositories').html(html)
 }
 
-function displayBranches() {
-  const branches = JSON.parse(this.responseText)
-  const html =
-    '<ul>' +
-    branches.map(function(branch){
-      return `<li><h2> ${repo.owner.login} </h2>
-      <a href="${repo.html_url}" data-repo="${repo.name}"> ${repo.name} </a><br>
-      <a href="#" onclick="getCommits(this)">Get Commits</a><br>
-      <a href="#" onclick="getBranches(this)">Get Branches</a><br>
-      `
-    }).join('')
-    +
-    '</ul>'
-  $('#repositories').html(html)
-}
 
 function getCommits(el){
   const req = new XMLHttpRequest();
