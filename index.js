@@ -32,11 +32,12 @@ function getCommits(el){
 }
 
 function getBranches(el){
+  // GET /repos/:owner/:repo/branches
   const req = new XMLHttpRequest();
   debugger
   const repo_name = el.dataset.repository
   const name = el.dataset.username
-  req.open('GET', 'https://api.github.com/users/' + name + '/' + repo_name + '/commits');
+  req.open('GET', 'https://api.github.com/repos/' + name + '/' + repo_name + '/branches');
   req.addEventListener('load', displayCommits);
   req.send();
 }
