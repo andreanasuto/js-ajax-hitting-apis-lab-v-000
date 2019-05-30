@@ -1,5 +1,15 @@
 function displayCommits() {
-  $('#repositories')
+  const commits = JSON.parse(this.responseText)
+  const html =
+    '<ul>' +
+    commits.map(function(commit){
+      debugger
+      return `<li><h2> ${commit} </h2>
+      `
+    }).join('')
+    +
+    '</ul>'
+  $('#details').html(html)
 }
 
 function displayRepositories() {
