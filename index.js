@@ -4,7 +4,9 @@ function displayCommits() {
     '<ul>' +
     commits.map(function(commit){
       debugger
-      return `<li><h2> ${commit} </h2>
+      return `<li>${commit.commit.author.name} </li>
+      <li>${commit.author.login}</li>
+      <li>${commit.commit.message}</li>
       `
     }).join('')
     +
