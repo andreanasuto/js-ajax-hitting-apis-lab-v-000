@@ -12,6 +12,7 @@ function displayRepositories() {
     html += `<li> ${e} </li>`
   })
   html += '</ul>'
+  debugger
   $('#repositories').html(html)
 }
 
