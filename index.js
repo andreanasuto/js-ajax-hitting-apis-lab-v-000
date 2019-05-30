@@ -27,7 +27,7 @@ function getCommits(el) {
   const username = el.dataset.username
   const req = new XMLHttpRequest()
   req.addEventListener("load", displayCommits)
-  req.open("GET", 'https://api.github.com/repos/' + username + '/Spoon-Knife/commits') // here it should go " '/' + repo + ..."
+  req.open("GET", 'https://api.github.com/repos/' + username + '/Spoon-Knife/commits')
   req.send()
 }
 
@@ -42,7 +42,7 @@ function getBranches(el) {
   const username = el.dataset.username
   const req = new XMLHttpRequest()
   req.addEventListener("load", displayBranches)
-  req.open("GET", 'https://api.github.com/repos/' + username + '/Spoon-Knife/branches') // here it should go " '/' + repo + ..."
+  req.open("GET", 'https://api.github.com/repos/' + username + '/Spoon-Knife/branches') // here it should go " '/' + repo + ...X"
   // /repos/:owner/:repo/branches
   req.send()
 }
