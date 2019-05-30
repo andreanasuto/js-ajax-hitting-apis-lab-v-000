@@ -21,5 +21,6 @@ function getBranches(){
 function getRepositories(){
   $('input[type="text"]').submit(function(e){
     let username = e.val()
+    debugger
   })
 }
