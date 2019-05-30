@@ -3,7 +3,7 @@ function displayCommits() {
 }
 
 function displayRepositories(req) {
-  const repos = JSON.parse(req.responseText)
+  const repos = JSON.parse(this.responseText)
   $('#repositories').html()
 }
 
