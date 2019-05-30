@@ -19,11 +19,15 @@ function displayRepositories() {
 }
 
 function displayBranches() {
-
+  
 }
 
 function getCommits(){
-
+  const req = new XMLHttpRequest();
+  const name = $('a[data-repo]').value
+  req.open('GET', 'https://api.github.com/users/' + name + '/repos');
+  req.addEventListener('load', displayRepositories);
+  req.send();
 }
 
 function getBranches(){
