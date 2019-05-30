@@ -17,7 +17,7 @@ function displayBranches() {
   const html =
     '<ul>' +
     branches.map(function(branch){
-      return `<p> ${commit.name} </p>
+      return `<p> ${branch.name} </p>
       `
     }).join('')
     +
