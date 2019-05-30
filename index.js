@@ -8,7 +8,7 @@ function displayRepositories() {
     '<ul>' +
     repos.map(function(repo){
       debugger
-      return `<li><h2> ${repo.owner.name} </h2>
+      return `<li><h2> ${repo.owner.login} </h2>
       <a href="${repo.html_url}" data-repo="${repo.name}"> ${repo.name} </a><br>
       <a href="#" onclick="getCommits(this)">Get Commits</a><br>
       <a href="#" onclick="getBranches(this)">Get Branches</a><br>
