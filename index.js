@@ -8,7 +8,9 @@ function displayRepositories() {
     '<ul>' +
     repos.map(function(repo){
       return `<li><h2> ${repo.owner} </h2>
-      <a href="${repo.html_url}" data-repo="${repo.name}">${repo.name} </a>
+      <a href="${repo.html_url}" data-repo="${repo.name}"> ${repo.name} </a>
+      <a href="#" onclick="getCommits(this)">Get Commits</a>
+      <a href="#">Get Branches</a>
       `
     })
     +
