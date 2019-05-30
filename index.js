@@ -2,8 +2,9 @@ function displayCommits() {
   $('#repositories')
 }
 
-function displayRepositories() {
-  $('#repositories').html
+function displayRepositories(repos) {
+
+  $('#repositories').html()
 }
 
 function displayBranches() {
@@ -19,8 +20,8 @@ function getBranches(){
 }
 
 function getRepositories(){
-  $('input[type="text"]').submit(function(e){
-    let username = e.val()
-    e.preventDeafult()
-  })
+  const req = new XMLHttpRequest();
+  const name = $('input[type=text]').val()
+  req.open('GET', 'https://api.github.com/users/' + name + '/repos');
+  req.send();
 }
