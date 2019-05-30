@@ -24,6 +24,5 @@ function getRepositories(){
   const name = $('input[type=text]').value
   req.open('GET', 'https://api.github.com/users/' + name + '/repos');
   req.send();
-  debugger
-  displayRepositories()
+  displayRepositories(req.responseText)
 }
