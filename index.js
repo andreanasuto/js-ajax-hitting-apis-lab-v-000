@@ -4,6 +4,7 @@ function displayCommits() {
 
 function displayRepositories(req) {
   const repos = JSON.parse(req.responseText)
+  debugger
   $('#repositories').html()
 }
 
