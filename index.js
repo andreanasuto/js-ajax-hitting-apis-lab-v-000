@@ -4,8 +4,15 @@ function displayCommits() {
 
 function displayRepositories() {
   const repos = JSON.parse(this.responseText)
-  debugger
-  $('#repositories').html()
+  const info = repos.map(function (repo) {
+  	return repo.html_url, repo.name
+  })
+  const html = '<ul>'
+  info.forEach(function (e) {
+    html += `<li> ${e} </li>`
+  })
+  html += '</ul>'
+  $('#repositories').html(html)
 }
 
 function displayBranches() {
