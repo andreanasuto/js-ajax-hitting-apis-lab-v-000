@@ -4,7 +4,7 @@ function displayCommits() {
 
 function displayRepositories() {
   const repos = JSON.parse(this.responseText)
-  const html = 
+  const html =
     '<ul>' +
     repos.map(function(repo){
       return `<li><h2> ${repo.owner} </h2>
